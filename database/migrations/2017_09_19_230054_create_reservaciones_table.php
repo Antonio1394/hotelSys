@@ -20,6 +20,12 @@ class CreateReservacionesTable extends Migration
             $table->string('horaI');
             $table->string('horaS');
             $table->string('boleta');
+            $table->foreign('idCliente')
+                  ->references('id')
+                  ->on('clientes');
+            $table->foreign('idHabitacion')
+                  ->references('id')
+                  ->on('habitaciones');
             $table->timestamps();
         });
     }
