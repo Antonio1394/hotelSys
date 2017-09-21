@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateReservacionesTable extends Migration
+class CreateCheckInTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,17 +12,11 @@ class CreateReservacionesTable extends Migration
      */
     public function up()
     {
-        Schema::create('reservaciones', function (Blueprint $table) {
+        Schema::create('checkIn', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('idCliente');
-            $table->bigInteger('idhabitacion');
+            $table->bigInteger('idHabitacion');
             $table->date('fecha');
-            $table->string('horaI');
-            $table->string('horaS');
-            $table->string('boleta');
-            $table->foreign('idCliente')
-                  ->references('id')
-                  ->on('clientes');
+            $table->string('hora'):
             $table->foreign('idHabitacion')
                   ->references('id')
                   ->on('habitaciones');
@@ -37,6 +31,6 @@ class CreateReservacionesTable extends Migration
      */
     public function down()
     {
-        Schema::drop('reservaciones');
+        Schema::drop('checkIn');
     }
 }

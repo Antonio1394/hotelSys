@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateItemsHabitacionTable extends Migration
+class CreateCheckOutTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,9 +12,8 @@ class CreateItemsHabitacionTable extends Migration
      */
     public function up()
     {
-        Schema::create('itemsHabitacion', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('descripcion');
+        Schema::create('checkOut', function (Blueprint $table) {
+            $table->increments('id');
             $table->timestamps();
         });
     }
@@ -26,6 +25,6 @@ class CreateItemsHabitacionTable extends Migration
      */
     public function down()
     {
-        Schema::drop('itemsHabitacion');
+        Schema::drop('checkOut');
     }
 }
