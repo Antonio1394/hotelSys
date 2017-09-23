@@ -13,7 +13,12 @@ class CreateCheckOutTable extends Migration
     public function up()
     {
         Schema::create('checkOut', function (Blueprint $table) {
-            $table->increments('id');
+            $table->bigIncrements('id');
+            $table->bigInteger('idHabitacion');
+            $table->date('fecha')
+
+
+            
             $table->timestamps();
         });
     }
