@@ -18,6 +18,7 @@ class CreateCheckOutTable extends Migration
             $table->date('fecha')
 
 
+
             
             $table->timestamps();
         });
