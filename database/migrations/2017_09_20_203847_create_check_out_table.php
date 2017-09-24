@@ -19,7 +19,7 @@ class CreateCheckOutTable extends Migration
 
 
 
-            
+
             $table->timestamps();
         });
     }
