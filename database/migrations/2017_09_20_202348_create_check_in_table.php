@@ -13,10 +13,10 @@ class CreateCheckInTable extends Migration
     public function up()
     {
         Schema::create('checkIn', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->bigInteger('idHabitacion');
+            $table->bigIncrements('id')->unsigned();
+            $table->bigInteger('idHabitacion')->unsigned();
             $table->date('fecha');
-            $table->string('hora'):
+            $table->string('hora');
             $table->foreign('idHabitacion')
                   ->references('id')
                   ->on('habitaciones');

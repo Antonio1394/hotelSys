@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateDetallesHabitacionTable extends Migration
+class CreateDetallesOutTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,14 +12,14 @@ class CreateDetallesHabitacionTable extends Migration
      */
     public function up()
     {
-        Schema::create('detallesHabitacion', function (Blueprint $table) {
+        Schema::create('detallesOut', function (Blueprint $table) {
             $table->bigIncrements('id')->unsigned();
-            $table->bigInteger('idHabitacion')->unsigned();
+            $table->bigInteger('idCheck')->unsigned();
             $table->bigInteger('idItem')->unsigned();
-            $table->integer('cantidad');
-            $table->foreign('idHabitacion')
+            $table->boolean('estado');
+            $table->foreign('idCheck')
                   ->references('id')
-                  ->on('habitaciones');
+                  ->on('checkOut');
             $table->foreign('idItem')
                   ->references('id')
                   ->on('itemsHabitacion');
@@ -34,6 +34,6 @@ class CreateDetallesHabitacionTable extends Migration
      */
     public function down()
     {
-        Schema::drop('detallesHabitacion');
+        Schema::drop('detallesOut');
     }
 }

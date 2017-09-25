@@ -13,13 +13,13 @@ class CreateCheckOutTable extends Migration
     public function up()
     {
         Schema::create('checkOut', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->bigInteger('idHabitacion');
-            $table->date('fecha')
-
-
-
-
+            $table->bigIncrements('id')->unsigned();
+            $table->bigInteger('idHabitacion')->unsigned();
+            $table->date('fecha');
+            $table->string('hora');
+            $table->foreign('idHabitacion')
+                  ->references('id')
+                  ->on('habitaciones');
             $table->timestamps();
         });
     }

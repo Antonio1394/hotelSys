@@ -13,7 +13,7 @@ class CreateHabitacionesTable extends Migration
     public function up()
     {
         Schema::create('habitaciones', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->bigIncrements('id')->unsigned();
             $table->integer('noHabitacion');
             $table->integer('nivel');
             $table->integer('estado');

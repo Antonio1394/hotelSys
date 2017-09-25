@@ -13,9 +13,9 @@ class CreateDetallesInTable extends Migration
     public function up()
     {
         Schema::create('detallesIn', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->bigInteger('idCheck');
-            $table->bigInteger('idItem');
+            $table->bigIncrements('id')->unsigned();
+            $table->bigInteger('idCheck')->unsigned();
+            $table->bigInteger('idItem')->unsigned();
             $table->boolean('estado');
             $table->foreign('idCheck')
                   ->references('id')

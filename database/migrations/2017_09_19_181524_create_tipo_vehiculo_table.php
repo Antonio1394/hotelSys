@@ -13,7 +13,7 @@ class CreateTipoVehiculoTable extends Migration
     public function up()
     {
         Schema::create('tipoVehiculos', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->bigIncrements('id')->unsigned();
             $table->string('descripcion');
             $table->timestamps();
         });
