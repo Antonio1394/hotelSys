@@ -8,6 +8,10 @@ use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 
+use Illuminate\Http\Request;
+use App\Http\Requests;
+use Auth;
+
 class AuthController extends Controller
 {
     /*
@@ -33,6 +37,17 @@ class AuthController extends Controller
         $this->middleware('guest', ['except' => 'getLogout']);
     }
 
+
+    public function verifyLogin(Request $request)
+   {
+       // dd($request->dataArray['user']);
+       if(Auth::once(['user' => $request->dataArray['user'], "password" => $request->dataArray['password'] ]) ) {
+           return "ok";
+       } else {
+           return "no se pudo";
+       }
+   }
+
     /**
      * Get a validator for an incoming registration request.
      *
@@ -43,7 +58,7 @@ class AuthController extends Controller
     {
         return Validator::make($data, [
             'name' => 'required|max:255',
-            'email' => 'required|email|max:255|unique:users',
+            'email' => 'required|max:255|unique:users',
             'password' => 'required|confirmed|min:6',
         ]);
     }
