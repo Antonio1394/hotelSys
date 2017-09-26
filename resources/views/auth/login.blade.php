@@ -1,5 +1,4 @@
 @extends('auth.layout.main')
-
 @section('content')
 
     <div class="account-pages"></div>
@@ -12,7 +11,7 @@
         <div class=" card-box">
             <div class="panel-heading">
                 <h3 class="text-center">
-                    <strong class="text-custom">Aplicación</strong>
+                    <strong class="text-custom">Sistema Carmiña Isabel</strong>
                 </h3>
             </div>
             <div class="panel-body">
@@ -42,4 +41,4 @@
 
 
 
-@endsection(
+@endsection

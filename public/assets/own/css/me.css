@@ -1,0 +1,49 @@
+.dataTables_filter {
+    text-align: right !important;
+}
+.dataTables_paginate.paging_simple_numbers {
+    text-align: right !important;
+}
+.div-btn-new {
+    text-align: right;
+    margin-bottom: 10px !important;
+}
+.modal .modal-dialog .modal-content .modal-body {
+    padding-bottom: 5px !important;
+}
+.inbox-item-text img.modal-image {
+	width: 40% !important;
+	border-radius: 5px !important;
+	margin-top: 10px !important;
+	margin-bottom: 10px !important;
+}
+.dataTables_length label {
+    white-space: normal !important;
+}
+.dataTables_filter label {
+    white-space: normal !important;
+}
+.dataTables_info {
+    white-space: normal !important;
+}
+.bg-icon.bg-icon-info img {
+    height: 78px;
+    width: 78px;
+    border-radius: 50%;
+    line-height: 80px;
+}
+.color-red {
+    color: red;
+}
+.add-margin-bottom-20 {
+    margin-bottom: 20px;
+}
+.add-margin-bottom-30 {
+    margin-bottom: 30px;
+}
+.chat-input {
+    resize: none;
+}
+.show-chat {
+    margin-bottom: 10px;
+}

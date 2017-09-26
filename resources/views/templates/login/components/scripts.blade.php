@@ -16,12 +16,10 @@
 {!! Html::script('assets/js/notify.min.js') !!}
 {!! Html::script('assets/js/notify-metro.js') !!}
 {!! Html::script('assets/plugins/parsleyjs/dist/parsley.min.js') !!}
-
 {!! Html::script('assets/own/js/login.js') !!}
 {!! Html::script('assets/own/js/general.js') !!}
 {!! Html::script('assets/own/js/general.classes.js') !!}
 {!! Html::script('assets/own/js/jquery.introLoader.pack.min.js') !!}
-
 
 {!! Html::script('assets/js/jquery.core.js') !!}
 {!! Html::script('assets/js/jquery.app.js') !!}
