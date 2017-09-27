@@ -14,6 +14,11 @@ use Auth;
 
 class AuthController extends Controller
 {
+
+
+    protected $username     = 'user';
+    protected $redirectTo   = 'admin';
+    protected $loginPath    = '/';
     /*
     |--------------------------------------------------------------------------
     | Registration & Login Controller
