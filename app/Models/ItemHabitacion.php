@@ -9,4 +9,12 @@ class ItemHabitacion extends Model
     protected $table='itemsHabitacion';
 
     protected $fillable=['descripcion'];
+
+
+    public $relations=['detalleHabitacion'];
+
+    public function detalleHabitacion()
+    {
+        return $this->hasMany('App\Models\DetalleHabitacion', 'idItem');
+    }
 }

@@ -12,11 +12,15 @@ class DetalleHabitacion extends Model
                          'idItem',
                          'cantidad'];
 
-    public $relations=['habitacion'];
+    public $relations=['habitacion', 'itemHabitacion'];
 
     public function habitacion()
     {
       return $this->belongsTo('App\Models\Habitacion','idHabitacion');
+    }
 
+    public function itemHabitacion()
+    {
+      return $this->belongsTo('App\Models\ItemHabitacion','idItem');
     }
 }
