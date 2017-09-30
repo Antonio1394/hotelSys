@@ -12,5 +12,27 @@ class Habitacion extends Model
                          'nivel',
                          'estado',
                          'tarifa',
-                        ]
+                       ];
+
+    public $relations=['reservacion','detalleHabitacion','checkIn','checkOut'];
+
+    public function reservacion()
+    {
+      return $this->hasMany('App\Models\Reservacion', 'idHabitacion');
+    }
+
+    public function detalleHabitacion()
+    {
+      return $this->hasMany('App\Models\DetalleHabitacion', 'idHabitacion');
+    }
+
+    public function checkIn()
+    {
+      return $this->hasMany('App\Models\CheckIn', 'idHabitacion');
+    }
+
+    public function checkOut()
+    {
+      return $this->hasMany('App\Models\CheckOut', 'idHabitacion');
+    }
 }

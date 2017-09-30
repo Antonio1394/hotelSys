@@ -11,4 +11,12 @@ class DetalleHabitacion extends Model
     protected $fillable=['idHabitacion',
                          'idItem',
                          'cantidad'];
+
+    public $relations=['habitacion'];
+
+    public function habitacion()
+    {
+      return $this->belongsTo('App\Models\Habitacion','idHabitacion');
+
+    }
 }

@@ -18,5 +18,19 @@ class Cliente extends Model
                          'placa',
                          'color',
                          'descuento',
-                          ]
+                       ];
+
+     public $relations = ['tipoVehiculo', 'reservacion'];
+
+     public function tipoVehiculo()
+     {
+       return $this->belongsTo('App\Models\TipoVehiculo','tipoVehiculo');
+     }
+
+     public function cliente()
+     {
+         return $this->hasMany('App\Models\Reservacion', 'idCliente');
+     }
+
+
 }

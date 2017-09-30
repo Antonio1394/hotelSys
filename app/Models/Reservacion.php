@@ -13,5 +13,17 @@ class Reservacion extends Model
                          'horaI',
                          'horaS',
                          'boleta',
-                        ]
+                       ];
+
+    public $relations=['cliente','habitacion'];
+
+    public function cliente()
+    {
+      return $this->belongsTo('App\Models\Cliente','idHabitacion');
+    }
+
+    public function habitacion()
+    {
+      return $this->belongsTo('App\Models\Habitacion','idCliente');
+    }
 }
