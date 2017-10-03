@@ -8,6 +8,8 @@ class TipoVehiculo extends Model
 {
     protected $table='tipoVehiculos';
 
+
+
     
 
     protected $fillable=['descripcion'];
