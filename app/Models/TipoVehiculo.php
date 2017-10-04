@@ -10,7 +10,10 @@ class TipoVehiculo extends Model
 
 
 
-    
+
+
+
+
 
     protected $fillable=['descripcion'];
 
