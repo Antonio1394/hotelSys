@@ -8,13 +8,6 @@ class TipoVehiculo extends Model
 {
     protected $table='tipoVehiculos';
 
-
-
-
-
-
-
-
     protected $fillable=['descripcion'];
 
     public $relations = ['cliente'];

@@ -21,6 +21,9 @@ Route::group(['prefix' => 'admin', 'namespace' => '\Admin', 'middleware' => ['au
 
     Route::get('/', 'PrincipalController@index');
 
+    //Rutas Usuario
+    Route::resource('/user','UserController');
+
 
 });
 

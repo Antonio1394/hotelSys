@@ -15,6 +15,8 @@ class UserTableSeeder extends Seeder
       $user->name='Juan Antonio';
       $user->user='admin';
       $user->password=bcrypt('123456789');
+      $user->tipo=1;
+      $user->estado=1;
       $user->save();
     }
 }
