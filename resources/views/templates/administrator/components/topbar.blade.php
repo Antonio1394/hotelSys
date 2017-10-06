@@ -2,12 +2,9 @@
 
   <!-- LOGO -->
   <div class="topbar-left">
-      <div class="text-center">
-          <a href="/" class="logo">
-            <img src="/assets/images/logo.jpg" alt="">
-            <span>SCI</span>
+          <a href="/admin" class="logo">
+            <img src="/assets/images/logoHotel.png" alt="" style="width: 30%;margin-left: 10%">
           </a>
-      </div>
   </div>
 
   <!-- Button mobile view to collapse sidebar menu -->

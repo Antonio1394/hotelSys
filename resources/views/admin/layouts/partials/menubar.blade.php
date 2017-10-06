@@ -32,7 +32,9 @@
                 </li>
 
                 <li>
-                    <img src="/assets/images/umg.png" alt="" style="width: 60%;margin-left: 20%">
+                  <br>
+                  <br>
+                    <img src="/assets/images/logoHotel.png" alt="" style="width: 60%;margin-left: 20%">
                 </li>
             </ul>
             <div class="clearfix"></div>

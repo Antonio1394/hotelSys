@@ -37,8 +37,15 @@
                                         <td>{{ $key + 1 }}</td>
                                         <td>{{ $value->name }}</td>
                                         <td>{{ $value->user }}</td>
-                                        <td>{{ $value->tipo }}</td>
+                                        @if($value->tipo==1)
+                                          <td>Administrador</td>
+                                        @elseif($value->tipo==2)
+                                            <td>Gerente</td>
+                                        @else
+                                            <td>Recepcionista</td>
+                                        @endif
 																				@if($value->estado==1)
+
 																					<td style="color:blue;">Activo</td>
 																					<td class="text-center">
 																					<button class="btn btn-icon waves-effect waves-light btn-primary loadModal" data-toggle="modal" data-target="#modal-maintenances" data-url="/admin/user/{{ $value->id }}/edit" data-title="Actualizar Cliente">
