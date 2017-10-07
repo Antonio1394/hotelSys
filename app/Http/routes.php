@@ -21,7 +21,8 @@ Route::group(['prefix' => 'admin', 'namespace' => '\Admin', 'middleware' => ['au
 
     Route::get('/', 'PrincipalController@index');
 
-    //Rutas Usuario
+    //Rutas Usuario y empleados
+    Route::post('/user/verifyCreate', 'UserController@verifyCreate');
     Route::resource('/user','UserController');
 
 

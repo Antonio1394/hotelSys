@@ -38,7 +38,26 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        return $request;
+      try {
+          $user= new User;
+          $user->name=$request->name;
+          $user->user=$request->user;
+          $user->password=$request->password;
+          $user->tipo=$request->tipo;
+          $user->estado=1;
+          $user->save();
+          return redirect()->back()->with('message','Registro creado correctamente.');
+      } catch (Exception $e) {
+          return redirect()->back()->with("error", "No se pudo realizar la acción.". $e->getMessage());
+      }
+
+    }
+
+    public function verifycreate (Request $request)
+    {
+        $number=User::where('user',$request->dataArray['user'])->count();
+        $res=($number == 0) ? "ok" : "error";
+        return $res;
     }
 
     /**

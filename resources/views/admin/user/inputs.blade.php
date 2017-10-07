@@ -5,7 +5,7 @@
     {!! Form::label('name', 'Nombre*', ['class' => 'col-sm-3 control-label']) !!}
     <div class="col-sm-9">
         {!! Form::text('name', null, ['class' => 'form-control',
-                                      'id' => 'user',
+                                      'id' => 'name',
                                       'required' => 'required',
                                       'placeholder' => 'Nombre Completo',
                                       'data-parsley-required-message' => 'Escriba el nombre completo']) !!}

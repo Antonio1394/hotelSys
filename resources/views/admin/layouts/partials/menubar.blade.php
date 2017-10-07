@@ -11,6 +11,9 @@
                 <li class="@yield('dashboardMenu', 'default')">
                     <a href="{{url('/admin')}}" class="waves-effect @yield('dashboardMenu', 'default')"><i class="ti-home"></i> <span> Inicio </span> </a>
                 </li>
+                <li class="@yield('dashboardMenu', 'default')">
+                    <a href="{{url('/admin/user')}}" class="waves-effect @yield('userMenu', 'default')"><i class="ti-user"></i> <span> Empleados </span> </a>
+                </li>
                 <li class="has_sub">
                   <a href="#" class="waves-effect">
                     <i class="ti-light-bulb"></i>
