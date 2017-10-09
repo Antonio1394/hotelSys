@@ -7,6 +7,9 @@
 
 @endsection
 
+
+
+
 @section('content')
 	<div class="main-body" v-show="!chatview">
 		<div class="row show-chat">
