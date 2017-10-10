@@ -79,7 +79,8 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        $dataEdit=User::find($id);
+        return view('admin.user.edit',compact('dataEdit'));
     }
 
     /**
@@ -91,7 +92,15 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+      try {
+          $user=User::findOrFail($id);
+          return $user;
+          // $user->name=$request->name;
+          // $user->save();
+          // return redirect()->back()->with('message','Registro Editado correctamente.');
+      } catch (Exception $e) {
+          return redirect()->back()->with("error", "No se pudo realizar la acción.");
+      }
     }
 
     /**
