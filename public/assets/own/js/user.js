@@ -24,7 +24,7 @@ $(document).ready(function(){
               //     };
               //     url = '/admin/agents/verifyedit';
               // }
-              console.log($('#user').val());
+
               var verification_data = new AjaxRequest( dataArray, url, $('#token').val() );
 
               verification_data.sending(function ( responseError ) {
@@ -37,8 +37,6 @@ $(document).ready(function(){
                        animation:true,
                       background: '#ff0000',
                      });
-
-
                       $(".form-horizontal .waves-light").prop('disabled', false);
                   } else
                       objForm.unbind('submit').submit();
