@@ -20,11 +20,21 @@
                         <input type="hidden" name="token" id="token" value="{{ csrf_token() }}">
 
                         <div class="form-group w-icon">
-                            {!! Form::text('user', old('user'), ['class' => 'form-control', 'id' => 'user', "placeholder" => "Usuario", "required" => "required", "data-parsley-required-message" => "Escriba el usuario"]) !!}
+                            {!! Form::text('user', old('user'), ['class' => 'form-control',
+                                                                 'id' => 'user',
+                                                                 "placeholder" => "Usuario",
+                                                                 "required" => "required",
+                                                                 "data-parsley-required-message" => "Escriba el usuario"]) !!}
                         </div>
 
                         <div class="form-group w-icon">
-                            {!! Form::password("password", ["class" => "form-control", "placeholder" => "Contraseña", "id" => 'password', "required" => "required", "data-parsley-required-message" => "Escriba la contraseña", 'data-parsley-minlength' => "5", "data-parsley-minlength-message" => "Escriba 8 o mas caracteres"]) !!}
+                            {!! Form::password("password", ["class" => "form-control",
+                                                            "placeholder" => "Contraseña",
+                                                            "id" => 'password',
+                                                            "required" => "required",
+                                                            "data-parsley-required-message" => "Escriba la contraseña",
+                                                            'data-parsley-minlength' => "5",
+                                                            "data-parsley-minlength-message" => "Escriba 8 o mas caracteres"]) !!}
                         </div>
 
                         <div class="form-group text-center m-t-40">
@@ -38,7 +48,5 @@
             </div>
         </div>
     </div>
-
-
 
 @endsection

@@ -106,6 +106,17 @@ class UserController extends Controller
         }
     }
 
+    public function verifyEdit(Request $request)
+    {
+        $number=User::where('user',$request->dataArray['user'])
+                   ->where('id','!=',$request->dataArray['id'])
+                   ->count();
+
+         $res=($number == 0) ? "ok" : "error";
+         return $res;
+
+    }
+
     /**
      * Remove the specified resource from storage.
      *

@@ -17,13 +17,13 @@ $(document).ready(function(){
                   };
                   url = '/admin/user/verifyCreate';
                }
-              // else {
-              //     dataArray = {
-              //         dpi: $("#dpi").val(),
-              //         id: $("#id").val()
-              //     };
-              //     url = '/admin/agents/verifyedit';
-              // }
+              else {
+                  dataArray = {
+                      user: $("#user").val(),
+                      id: $("#id").val()
+                  };
+                  url = '/admin/user/verifyEdit';
+              }
 
               var verification_data = new AjaxRequest( dataArray, url, $('#token').val() );
 

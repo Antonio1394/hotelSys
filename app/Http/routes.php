@@ -23,6 +23,7 @@ Route::group(['prefix' => 'admin', 'namespace' => '\Admin', 'middleware' => ['au
 
     //Rutas Usuario y empleados
     Route::post('/user/verifyCreate', 'UserController@verifyCreate');
+    Route::post('/user/verifyEdit', 'UserController@verifyEdit');
     Route::resource('/user','UserController');
 
 
