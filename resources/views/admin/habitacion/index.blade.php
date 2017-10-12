@@ -10,38 +10,17 @@
 	<div class="row">
         <div class="col-lg-12">
     			<div class="panel panel-border panel-custom">
-    				<div class="panel-heading">
+    				<div class="panel-heading" style="background:#ebeff2;">
     					<h3 class="panel-title">Listado de Habitaciones</h3>
     				</div>
-    				<div class="panel-body">
+    				<div class="panel-body" style="background:#ebeff2;">
                 <!--Inicio  -->
                 <div class="col-lg-4">
                   <div class="card-box" style="border-left: 6px solid red; background-color:white;">
                     <div class="bar-widget">
                       <div class="table-box">
                         <div class="table-detail">
-                          <div class="iconbox bg-warning">
-                            <i class="icon-layers"></i>
-                          </div>
-                        </div>
-                        <div class="table-detail">
-                           <h4 class="m-t-0 m-b-5"><b>12560</b></h4>
-                           <p class="text-muted m-b-0 m-t-0">Total Revenue</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-
-
-
-                <div class="col-lg-4">
-                  <div class="card-box" style="border-style: solid;  border-width: 2px 10px 2px 10px; border-color:#c9d1dd;  border-radius: 5px;">
-                    <div class="bar-widget">
-                      <div class="table-box">
-                        <div class="table-detail">
-                          <div class="iconbox bg-warning">
+                          <div class="iconbox bg-success">
                             <i class="icon-layers"></i>
                           </div>
                         </div>
