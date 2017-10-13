@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
-
+use App\Models\Habitacion;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -16,7 +16,8 @@ class HabitacionController extends Controller
      */
     public function index()
     {
-        return view('admin.habitacion.index');
+        $habitaciones=Habitacion::orderBy('id','asc')->get();
+        return view('admin.habitacion.index',compact('habitaciones'));
     }
 
     /**

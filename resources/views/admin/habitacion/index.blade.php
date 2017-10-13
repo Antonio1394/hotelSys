@@ -15,26 +15,29 @@
     				</div>
     				<div class="panel-body" style="background:#ebeff2;">
                 <!--Inicio  -->
-                <div class="col-lg-4">
-                  <div class="card-box" style="border-left: 6px solid red; background-color:white;">
-                    <div class="bar-widget">
-                      <div class="table-box">
-                        <div class="table-detail">
-                          <div class="iconbox bg-success">
-                            <i class="icon-layers"></i>
-                          </div>
-                        </div>
-                        <div class="table-detail">
-                           <h4 class="m-t-0 m-b-5"><b>12560</b></h4>
-                           <p class="text-muted m-b-0 m-t-0">Total Revenue</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-
-								
+								@foreach($habitaciones as $data)
+	                <div class="col-lg-4 col-sm-6">
+	                  <div class="card-box" style="border-left: 6px solid lime; background-color:white;">
+	                    <div class="bar-widget">
+	                      <div class="table-box">
+	                        <div class="table-detail">
+	                          <div class="iconbox bg-success">
+	                            <i class="icon-layers"></i>
+	                          </div>
+														<div class="iconbox bg-success">
+	                            <i class="icon-layers"></i>
+	                          </div>
+	                        </div>
+	                        <div class="table-detail">
+	                           <h4 class="m-t-0 m-b-5"><b>No: {{$data->noHabitacion}}</b></h4>
+	                           <p class="text-muted m-b-0 m-t-0">Nivel: {{$data->nivel}}</p>
+														 <p class="text-muted m-b-0 m-t-0">Estado</p>
+	                        </div>
+	                      </div>
+	                    </div>
+	                  </div>
+	                </div>
+								@endforeach
                 <!--FIN -->
     				</div>
     			</div>
