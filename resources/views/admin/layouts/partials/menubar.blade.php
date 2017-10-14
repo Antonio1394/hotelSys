@@ -16,7 +16,7 @@
                 </li>
 
                 <li class="@yield('habitacionMenu', 'default')">
-                    <a href="{{url('/admin/habitacion')}}" class="waves-effect @yield('habitacionMenu', 'default')"><i class="ti-user"></i> <span> Habitaciones </span> </a>
+                    <a href="{{url('/admin/habitacion')}}" class="waves-effect @yield('habitacionMenu', 'default')"><i class="fa fa-bed"></i> <span> Habitaciones </span> </a>
                 </li>
 
                 <li class="has_sub">
