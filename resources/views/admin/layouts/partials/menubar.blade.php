@@ -19,6 +19,9 @@
                     <a href="{{url('/admin/habitacion')}}" class="waves-effect @yield('habitacionMenu', 'default')"><i class="fa fa-bed"></i> <span> Habitaciones </span> </a>
                 </li>
 
+
+
+
                 <li class="has_sub">
                   <a href="#" class="waves-effect">
                     <i class="ti-light-bulb"></i>
