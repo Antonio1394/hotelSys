@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
-
+use App\Models\Habitacion;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -16,7 +16,11 @@ class PrincipalController extends Controller
      */
     public function index()
     {
-        return view('admin.index');
+        ////1 Disponible, 2 Ocupada, 3 Mantenimento
+        $dis=Habitacion::where('estado','=',1)->count();
+        $ocu=Habitacion::where('estado','=',2)->count();
+        $man=Habitacion::where('estado','=',3)->count();
+        return view('admin.index',compact('dis','ocu','man'));
     }
 
     /**
