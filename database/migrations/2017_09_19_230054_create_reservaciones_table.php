@@ -17,6 +17,8 @@ class CreateReservacionesTable extends Migration
             $table->bigInteger('idCliente')->unsigned();
             $table->bigInteger('idhabitacion')->unsigned();
             $table->date('fecha');
+            $table->date('fechaI');
+            $table->date('fechaS');
             $table->string('horaI');
             $table->string('horaS');
             $table->string('boleta');

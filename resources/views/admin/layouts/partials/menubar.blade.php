@@ -20,14 +20,10 @@
                 </li>
 
 
-
-
-
-
                 <li class="has_sub">
                   <a href="#" class="waves-effect">
-                    <i class="ti-light-bulb"></i>
-                    <span>Habitaciones</span>
+                    <i class="md-assignment-turned-in"></i>
+                    <span>Reservaciones</span>
                   </a>
                   <ul class="list-unstyled" style="display: none;">
                     <li class="@yield('agentMenu', 'default')">

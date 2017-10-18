@@ -10,6 +10,8 @@ class Reservacion extends Model
     protected $fillable=['idCliente',
                          'idHabitacion',
                          'fecha',
+                         'fechaI',
+                         'fechaS',
                          'horaI',
                          'horaS',
                          'boleta',
