@@ -12,3 +12,14 @@
                                       'data-parsley-required-message' => 'Este campo no puede ir vacio']) !!}
     </div>
 </div>
+
+
+<div class="panel panel-border panel-success">
+    <div class="panel-heading">
+			<h3 class="panel-title">Informacion</h3>
+		</div>
+    <div class="panel-body">
+        {!! Form::label('DPI', 'DPI*', ['class' => 'col-sm-3 control-label',
+                                        'id'=>'idNombre']) !!}
+    </div>
+</div>

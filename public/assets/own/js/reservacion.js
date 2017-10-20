@@ -29,7 +29,8 @@ $(document).ready(function(){
 
                 success: function (result) {
                     $.each(result.cliente,function(i, cliente){
-                        console.log(cliente.nombre+ cliente.id);
+                        // console.log(cliente.nombre+ cliente.id);
+                        $("#idNombre").text(cliente.nombre);
                     });
                 },
                 error: function(){
