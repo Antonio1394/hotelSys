@@ -30,10 +30,10 @@ class ReservacionController extends Controller
         return view('admin.reservacion.create');
     }
 
-    public function verifyDpi(Request $request)
+    public function verifyDpi($dpiData)
     {
-        
-        $cliente=Cliente::where('dpi','!=',$request->data['dpi'])->get();
+
+        $cliente=Cliente::where('dpi','=', $dpiData)->get();
         return response()->json(['cliente'=> $cliente], 200);
 
 

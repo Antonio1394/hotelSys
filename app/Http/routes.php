@@ -26,8 +26,8 @@ Route::group(['prefix' => 'admin', 'namespace' => '\Admin', 'middleware' => ['au
     Route::post('/user/verifyEdit', 'UserController@verifyEdit');
     Route::resource('/user','UserController');
 
-    //Ruta HabitacionesTableSeeder
-    Route::get('/habitacion/verifyDpi','ReservacionController@verifyDpi');
+    //Ruta Habitaciones
+    Route::get('/habitacion/verifyDpi/{dpiData}','ReservacionController@verifyDpi');
     Route::resource('/habitacion','HabitacionController');
 
 

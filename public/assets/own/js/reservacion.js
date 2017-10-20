@@ -9,7 +9,7 @@ $(document).ready(function(){
           });
 
           $( "#btnBuscar" ).click(function() {
-            var dpi=document.getElementById("idDpi").value;
+            var dpiData=document.getElementById("idDpi").value;
             if ($('#idDpi').val().length == 0){
               swal ({
                  title: "Error",
@@ -22,14 +22,14 @@ $(document).ready(function(){
             }else{
               $.ajax({
                   dataType: "json",
-                  url: '/admin/habitacion/verifyDpi',
-                  data:{
-                    dpi:dpi
+                  url: '/admin/habitacion/verifyDpi/'+dpiData,
+                  dataArray:{
+                    dpi:dpiData
                   },
 
                 success: function (result) {
                     $.each(result.cliente,function(i, cliente){
-                        console.log(cliente.nombre);
+                        console.log(cliente.nombre+ cliente.id);
                     });
                 },
                 error: function(){
