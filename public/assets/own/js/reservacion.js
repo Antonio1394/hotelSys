@@ -9,39 +9,34 @@ $(document).ready(function(){
           });
 
           $( "#btnBuscar" ).click(function() {
-            // $.ajax({
-            //   url : '/admin/habitacion/verifyDpi',
-            //   dataType: "json",
-            //   type:'get',
-            //   data:{
-            //     dpi:$("#dpi").val(),
-            //
-            //   }
-            // }).success(
-            //     function(res){
-            //       console.log(res);
-            //     }
-            // ).error(
-            //     function(){
-            //       console.log('error');
-            //     }
-            // );
+            var dpi=document.getElementById("idDpi").value;
+            if ($('#idDpi').val().length == 0){
+              swal ({
+                 title: "Error",
+                 text: "El campo esta vacio, intente de nuevo",
+                 type: "error",
+                 showConfirmButton: true,
+                 animation:true,
+                 background: 'red',
+               });
+            }else{
+              $.ajax({
+                  dataType: "json",
+                  url: '/admin/habitacion/verifyDpi',
+                  data:{
+                    dpi:dpi
+                  },
 
-            $.ajax({
-              dataType: "json",
-              url: '/admin/habitacion/verifyDpi',
-              data:{
-                  dpi:$("#dpi").val(),
-               },
-              success: function (result) {
-                  $.each(result.cliente,function(i, cliente){
-                      console.log(cliente.nombre);
-                  });
-              },
-              error: function(){
-                  console.log("error");
-              }
-            });
+                success: function (result) {
+                    $.each(result.cliente,function(i, cliente){
+                        console.log(cliente.nombre);
+                    });
+                },
+                error: function(){
+                    console.log("error");
+                }
+              });///FIn del Ajax
+            }///Fin del Else
           });///Fin function Click
 
 

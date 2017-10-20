@@ -32,8 +32,8 @@ class ReservacionController extends Controller
 
     public function verifyDpi(Request $request)
     {
-
-        $cliente=Cliente::where('dpi','=','8524650556080')->get();
+        
+        $cliente=Cliente::where('dpi','!=',$request->data['dpi'])->get();
         return response()->json(['cliente'=> $cliente], 200);
 
 

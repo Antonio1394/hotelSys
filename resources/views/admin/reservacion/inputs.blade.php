@@ -6,7 +6,7 @@
     {!! Form::label('DPI', 'DPI*', ['class' => 'col-sm-3 control-label']) !!}
     <div class="col-sm-9">
         {!! Form::number('dpi', null, ['class' => 'form-control',
-                                      'id' => 'dpi',
+                                      'id' => 'idDpi',
                                       'required' => 'required',
                                       'placeholder' => 'DPI del CLiente',
                                       'data-parsley-required-message' => 'Este campo no puede ir vacio']) !!}
