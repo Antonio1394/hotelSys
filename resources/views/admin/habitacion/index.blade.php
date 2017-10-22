@@ -28,7 +28,7 @@
 		                      <div class="table-box">
 		                        <div class="table-detail">
 															<div class="iconbox bg-info">
-		                           <a class="waves-effect waves-light loadModal" data-toggle="modal" data-target="#modal-maintenances" data-url="/admin/reservacion/create" data-title="Crear Usuario" ><i class=" md md-assignment"></i></a>
+		                           <a class="waves-effect waves-light loadModal" data-toggle="modal" data-target="#modal-maintenances" data-url="/admin/reservacion/create" data-title="Crear Reservación" ><i class=" md md-assignment"></i></a>
 		                          </div>
 		                        </div>
 		                        <div class="table-detail">

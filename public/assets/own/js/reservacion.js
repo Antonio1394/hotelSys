@@ -2,6 +2,12 @@
 
 $(document).ready(function(){
   $('.form-horizontal .waves-light').prop('disabled', true);
+  $('#IdInformation').hide();
+
+  $('#idDpi').click(function(){
+    $('#IdInformation').hide('slow');
+  });
+
     $('#createForm, #editForm')
         .parsley()
         .on('form:submit', function() {
@@ -29,8 +35,9 @@ $(document).ready(function(){
 
                 success: function (result) {
                     $.each(result.cliente,function(i, cliente){
-                        // console.log(cliente.nombre+ cliente.id);
-                        $("#idNombre").text(cliente.nombre);
+                        $('#IdInformation').show('slow');
+                        $("#idNombre").text(cliente.nombre+" "+cliente.apellido);
+                        $("#idTel").text(cliente.telefono);
                     });
                 },
                 error: function(){
