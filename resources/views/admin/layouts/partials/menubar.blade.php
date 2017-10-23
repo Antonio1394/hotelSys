@@ -19,6 +19,10 @@
                     <a href="{{url('/admin/habitacion')}}" class="waves-effect @yield('habitacionMenu', 'default')"><i class="fa fa-bed"></i> <span> Habitaciones </span> </a>
                 </li>
 
+                <li class="@yield('ClienteMenu', 'default')">
+                    <a href="{{url('/admin/cliente')}}" class="waves-effect @yield('ClienteMenu', 'default')"><i class="md  md-assignment-ind"></i> <span> Clientes </span> </a>
+                </li>
+
 
                 <li class="has_sub">
                   <a href="#" class="waves-effect">

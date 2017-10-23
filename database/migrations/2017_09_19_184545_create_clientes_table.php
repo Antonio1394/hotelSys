@@ -24,7 +24,6 @@ class CreateClientesTable extends Migration
             $table->string('placa');
             $table->string('color');
             $table->boolean('descuento');
-
             $table->foreign('tipoVehiculo')
                   ->references('id')
                   ->on('tipoVehiculos');

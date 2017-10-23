@@ -34,6 +34,9 @@ Route::group(['prefix' => 'admin', 'namespace' => '\Admin', 'middleware' => ['au
     ////Ruta para Reservaciones
     Route::resource('/reservacion','ReservacionController');
 
+    ///Ruta para Clientes
+    Route::resource('/cliente','ClienteController');
+
 
 
 
