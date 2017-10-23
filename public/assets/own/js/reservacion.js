@@ -23,7 +23,6 @@ $(document).ready(function(){
                  type: "error",
                  showConfirmButton: true,
                  animation:true,
-                 background: 'red',
                });
             }else{
               $.ajax({
@@ -35,15 +34,33 @@ $(document).ready(function(){
 
                 success: function (result) {
                     $.each(result.cliente,function(i, cliente){
+
                         $('#IdInformation').show('slow');
                         $("#idNombre").text(cliente.nombre+" "+cliente.apellido);
                         $("#idTel").text(cliente.telefono);
 
-                        
                     });
                 },
                 error: function(){
-                    console.log("error");
+                  swal({
+                    title: 'El cliente no esta registrado',
+                    text: "Desea Registrarlo?",
+                    type: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Registrar',
+                    cancelButtonText: 'Cancelar',
+                    confirmButtonClass: 'btn btn-success',
+                    cancelButtonClass: 'btn btn-danger',
+                    buttonsStyling: true
+                  }).then(function () {//// Si presiona ok
+                    swal(
+                      'Deleted!',
+                      'Your file has been deleted.',
+                      'success'
+                    )
+                  })
                 }
               });///FIn del Ajax
             }///Fin del Else

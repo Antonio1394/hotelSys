@@ -3,7 +3,7 @@
 @section('habitacionMenu', 'active')
 
 @section('styles')
-{!! Html::style('assets/own/dist/sweetalert.css') !!}
+<!-- {!! Html::style('assets/own/dist/sweetalert.css') !!} -->
 @endsection
 
 @section('content')
@@ -58,7 +58,7 @@
 
 @section('scripts')
 		@include('templates.administrator.components.footer')
-    {!! Html::script('assets/own/dist/sweetalert.min.js') !!}
+    <!-- {!! Html::script('assets/own/dist/sweetalert.min.js') !!} -->
     {!! Html::script('assets/plugins/moment/moment.js') !!}
 		{!! Html::script('assets/plugins/datatables/jquery.dataTables.min.js') !!}
 		{!! Html::script('assets/plugins/datatables/dataTables.bootstrap.js') !!}

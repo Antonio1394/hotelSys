@@ -34,7 +34,13 @@ class ReservacionController extends Controller
     {
 
         $cliente=Cliente::where('dpi','=', $dpiData)->get();
-        return response()->json(['cliente'=> $cliente], 200);
+        $num=Cliente::where('dpi','=', $dpiData)->count();
+        if ($num!=0) {
+          return response()->json(['cliente'=> $cliente], 200);
+        }else {
+          return 'error';
+        }
+
 
 
 
