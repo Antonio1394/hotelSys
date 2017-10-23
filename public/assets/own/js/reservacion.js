@@ -38,6 +38,8 @@ $(document).ready(function(){
                         $('#IdInformation').show('slow');
                         $("#idNombre").text(cliente.nombre+" "+cliente.apellido);
                         $("#idTel").text(cliente.telefono);
+
+                        
                     });
                 },
                 error: function(){
