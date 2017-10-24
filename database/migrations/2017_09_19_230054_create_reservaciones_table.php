@@ -16,18 +16,24 @@ class CreateReservacionesTable extends Migration
             $table->bigIncrements('id')->unsigned();
             $table->bigInteger('idCliente')->unsigned();
             $table->bigInteger('idhabitacion')->unsigned();
+            $table->bigInteger('tipoVehiculo')->unsigned();
             $table->date('fecha');
             $table->date('fechaI');
             $table->date('fechaS');
             $table->string('horaI');
             $table->string('horaS');
             $table->string('boleta');
+            $table->string('placa');
+            $table->string('color');
             $table->foreign('idCliente')
                   ->references('id')
                   ->on('clientes');
             $table->foreign('idHabitacion')
                   ->references('id')
                   ->on('habitaciones');
+            $table->foreign('tipoVehiculo')
+                  ->references('id')
+                  ->on('tipoVehiculos');
             $table->timestamps();
         });
     }

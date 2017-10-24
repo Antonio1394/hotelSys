@@ -14,9 +14,6 @@ class Cliente extends Model
                          'telefono',
                          'nit',
                          'dpi',
-                         'tipoVehiculo',
-                         'placa',
-                         'color',
                          'descuento',
                        ];
 

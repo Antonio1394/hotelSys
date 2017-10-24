@@ -39,7 +39,7 @@
     {!! Form::label('telefono', 'Teléfono*', ['class' => 'col-sm-3 control-label']) !!}
     <div class="col-sm-9">
         {!! Form::number('telefono', null, ['class' => 'form-control',
-                                      'id' => 'apellido',
+                                      'id' => 'telefono',
                                       'required' => 'required',
                                       'placeholder' => 'Teléfono',
                                       'data-parsley-required-message' => 'Escriba el Teléfono',
@@ -54,7 +54,7 @@
     {!! Form::label('dpi', 'DPI*', ['class' => 'col-sm-3 control-label']) !!}
     <div class="col-sm-9">
         {!! Form::number('dpi', null, ['class' => 'form-control',
-                                      'id' => 'apellido',
+                                      'id' => 'dpi',
                                       'required' => 'required',
                                       'placeholder' => 'DPI',
                                       'data-parsley-required-message' => 'Escriba el DPI',
@@ -62,5 +62,18 @@
                                       "data-parsley-type-message" => "Escriba un numero",
                                       'data-parsley-minlength' => "13",
                                       "data-parsley-minlength-message" => "Escriba 13 digitos",]) !!}
+    </div>
+</div>
+
+<div class="form-group">
+    {!! Form::label('nit', 'NIT', ['class' => 'col-sm-3 control-label']) !!}
+    <div class="col-sm-9">
+        {!! Form::number('nit', null, ['class' => 'form-control',
+                                      'id' => 'nit',
+                                      'placeholder' => 'NIT',
+                                      'data-parsley-type' => "digits",
+                                      "data-parsley-type-message" => "Escriba un numero",
+                                      'data-parsley-minlength' => "8",
+                                      "data-parsley-minlength-message" => "Escriba 8 digitos",]) !!}
     </div>
 </div>

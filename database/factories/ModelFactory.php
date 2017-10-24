@@ -28,9 +28,6 @@ $factory->define(App\Models\Cliente::class, function (Faker\Generator $faker) {
         'telefono'     => $faker->phoneNumber,
         'nit'          => $faker->ean8,
         'dpi'          => $faker->ean13,
-        'tipoVehiculo' => $faker->biasedNumberBetween($min = 1, $max = 3, $function = 'sqrt'),
-        'placa'        => $faker->e164PhoneNumber,
-        'placa'        => $faker->colorName,
         'descuento'    => 0
     ];
 });

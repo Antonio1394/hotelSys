@@ -38,7 +38,23 @@ class ClienteController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        try {
+          $cliente= new Cliente;
+          $cliente->nombre=$request->nombre;
+          $cliente->apellido=$request->apellido;
+          $cliente->direccion=$request->direccion;
+          $cliente->telefono=$request->telefono;
+          $cliente->dpi=$request->dpi;
+          if($request->nit=="")
+            $cliente->nit='C/F';
+          else
+            $cliente->nit=$request->nit;
+          $cliente->save();
+          return redirect()->back()->with('message','Registro creado correctamente.');
+        } catch (Exception $e) {
+            return redirect()->back()->with("error", "No se pudo realizar la acción.". $e->getMessage());
+        }
+
     }
 
     /**

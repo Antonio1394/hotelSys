@@ -20,13 +20,7 @@ class CreateClientesTable extends Migration
             $table->string('telefono');
             $table->string('nit');
             $table->bigInteger('dpi');
-            $table->bigInteger('tipoVehiculo')->unsigned();
-            $table->string('placa');
-            $table->string('color');
             $table->boolean('descuento');
-            $table->foreign('tipoVehiculo')
-                  ->references('id')
-                  ->on('tipoVehiculos');
             $table->timestamps();
         });
     }
