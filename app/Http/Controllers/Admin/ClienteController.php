@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
-
+use App\Models\Cliente;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -16,7 +16,8 @@ class ClienteController extends Controller
      */
     public function index()
     {
-        return view('admin.cliente.index');
+        $cliente=Cliente::orderBy('id','desc')->get();
+        return view('admin.cliente.index',compact('cliente'));
     }
 
     /**
@@ -26,7 +27,7 @@ class ClienteController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.cliente.create');
     }
 
     /**

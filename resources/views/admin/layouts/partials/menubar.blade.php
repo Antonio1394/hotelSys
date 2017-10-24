@@ -20,7 +20,7 @@
                 </li>
 
                 <li class="@yield('ClienteMenu', 'default')">
-                    <a href="{{url('/admin/cliente')}}" class="waves-effect @yield('ClienteMenu', 'default')"><i class="md  md-assignment-ind"></i> <span> Clientes </span> </a>
+                    <a href="{{url('/admin/cliente')}}" class="waves-effect @yield('clienteMenu', 'default')"><i class="md  md-assignment-ind"></i> <span> Clientes </span> </a>
                 </li>
 
 
