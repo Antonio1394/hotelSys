@@ -1,6 +1,6 @@
 <input type="hidden" name="token" id="token" value="{{ csrf_token() }}">
 
-<div class="panel panel-border panel-default">
+<div class="panel panel-border panel-default" id="idInformationDpi">
     <div class="panel-heading">
 			<h3 class="panel-title">Información</h3>
 		</div>
@@ -32,3 +32,4 @@
 
     </div>
 </div>
+@include('admin.habitacion.inputsCliente')

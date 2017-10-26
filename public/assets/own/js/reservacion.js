@@ -3,6 +3,8 @@
 $(document).ready(function(){
   $('.form-horizontal .waves-light').prop('disabled', true);
   $('#IdInformation').hide();
+  $('#IdInformationCliente').hide();
+
 
   $('#idDpi').click(function(){
     $('#IdInformation').hide('slow');
@@ -11,7 +13,6 @@ $(document).ready(function(){
     $('#createForm, #editForm')
         .parsley()
         .on('form:submit', function() {
-
           });
 
           $( "#btnBuscar" ).click(function() {
@@ -31,14 +32,11 @@ $(document).ready(function(){
                   dataArray:{
                     dpi:dpiData
                   },
-
                 success: function (result) {
                     $.each(result.cliente,function(i, cliente){
-
                         $('#IdInformation').show('slow');
                         $("#idNombre").text(cliente.nombre+" "+cliente.apellido);
                         $("#idTel").text(cliente.telefono);
-
                     });
                 },
                 error: function(){
@@ -55,11 +53,11 @@ $(document).ready(function(){
                     cancelButtonClass: 'btn btn-danger',
                     buttonsStyling: true
                   }).then(function () {//// Si presiona ok
-                    swal(
-                      'Deleted!',
-                      'Your file has been deleted.',
-                      'success'
-                    )
+                      $('#IdInformationCliente').show('slow');
+                      $('#idInformationDpi').hide('slow');
+                      $('.form-horizontal .waves-light').prop('disabled', false);
+                      $('#btnBuscar').prop('disabled', true);
+
                   })
                 }
               });///FIn del Ajax
