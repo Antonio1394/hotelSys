@@ -33,3 +33,4 @@
     </div>
 </div>
 @include('admin.habitacion.inputsCliente')
+@include('admin.reservacion.inputsReservacion')
