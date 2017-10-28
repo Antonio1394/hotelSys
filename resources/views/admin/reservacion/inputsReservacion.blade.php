@@ -1,6 +1,8 @@
 <div class="panel panel-border panel-success" id="IdInformationReservation">
     <div class="panel-body">
 
+
+
       
         <div class="form-group">
             {!! Form::label('fecha', 'Fecha Reservación*', ['class' => 'col-sm-3 control-label']) !!}
