@@ -1,6 +1,8 @@
 {!! Form::open(['route' => 'admin.reservacion.store', 'method' => 'POST', 'class' => 'form-horizontal', 'id' => 'createForm', 'data-parsley-validate' => '',]) !!}
     @include('admin.reservacion.inputs')
 
+
+
     
     <div class="modal-footer">
         {!! Form::submit('Crear', ['class' => 'btn btn-primary waves-effect waves-light']) !!}
