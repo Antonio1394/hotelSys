@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Models\Reservacion;
 use App\Models\Cliente;
+use App\Models\TipoVehiculo;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -27,7 +28,8 @@ class ReservacionController extends Controller
      */
     public function create()
     {
-        return view('admin.reservacion.create');
+        $tipo=$this->fillCombo(TipoVehiculo::all(),'descripcion');
+        return view('admin.reservacion.create',compact('tipo'));
     }
 
     public function verifyDpi($dpiData)
@@ -40,10 +42,6 @@ class ReservacionController extends Controller
         }else {
           return 'error';
         }
-
-
-
-
     }
 
     /**
@@ -100,5 +98,18 @@ class ReservacionController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    private function fillCombo($data, $field)
+    {
+        $dataCombo = ['' => 'Seleccione una opción'];
+
+        foreach ($data as $value) {
+            //$dataCombo[$value->id] = $value->$field;
+            $dataCombo[$value->id] = $value->$field;
+
+        }
+
+        return $dataCombo;
     }
 }
