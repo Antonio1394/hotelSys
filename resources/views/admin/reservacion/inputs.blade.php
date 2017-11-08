@@ -28,6 +28,10 @@
         {!! Form::label('tel', 'Telefono:', ['class' => 'col-sm-2 control-label']) !!}
         {!! Form::label('tel', 'tel*', ['class' => 'col-sm-2 control-label',
                                         'id'=>'idTel']) !!}
+
+        {!! Form::label('idC', 'tel*', ['class' => 'col-sm-2 control-label',
+                                        'id'=>'idCliente']) !!}
+
       </div>
 
     </div>

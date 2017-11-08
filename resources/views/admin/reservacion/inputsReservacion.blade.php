@@ -65,7 +65,7 @@
         </div>
 
         <div class="form-group">
-            {!! Form::label('color', 'Color*', ['class' => 'col-sm-3 control-label']) !!}
+            {!! Form::label('color', 'Color', ['class' => 'col-sm-3 control-label']) !!}
           <div class="col-sm-9">
             {!! Form::text('color', null, ['class' => 'form-control',
                                            'placeholder' => 'Color Vehiculo Ej.: Amarillo']) !!}
@@ -73,7 +73,7 @@
         </div>
 
         <div class="form-group">
-              {!! Form::label('image', 'Imagen*', ['class' => 'col-sm-3 control-label']) !!}
+              {!! Form::label('boleta', 'Boleta*', ['class' => 'col-sm-3 control-label']) !!}
           <div class="col-sm-9">
             {!! Form::file('boleta', ["class" => "filestyle",
                                       "data-size" => "sm",

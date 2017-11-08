@@ -1,13 +1,13 @@
 'use strict';
 
 $(document).ready(function(){
-  $('.form-horizontal .waves-light').prop('disabled', true);
+  $('.form-horizontal .waves-light').prop('disabled', true);//Bloquea boton de crear
   $('#IdInformation').hide();
   $('#IdInformationCliente').hide();
-
-
+  $('#IdInformationReservation').hide();
   $('#idDpi').click(function(){
     $('#IdInformation').hide('slow');
+    $('#IdInformationReservation').hide('slow');
   });
 
     $('#createForm, #editForm')
@@ -32,11 +32,14 @@ $(document).ready(function(){
                   dataArray:{
                     dpi:dpiData
                   },
-                success: function (result) {
+                success: function (result) {///Si el cliente existe
                     $.each(result.cliente,function(i, cliente){
                         $('#IdInformation').show('slow');
+                        $('#IdInformationReservation').show('slow');
                         $("#idNombre").text(cliente.nombre+" "+cliente.apellido);
                         $("#idTel").text(cliente.telefono);
+                        $("#idCliente").text(cliente.id);
+                        $('.form-horizontal .waves-light').prop('disabled', false);//Bloquea boton de crear
                     });
                 },
                 error: function(){
@@ -55,6 +58,7 @@ $(document).ready(function(){
                   }).then(function () {//// Si presiona ok
                       $('#IdInformationCliente').show('slow');
                       $('#idInformationDpi').hide('slow');
+                      $('#IdInformationReservation').show('slow');
                       $('.form-horizontal .waves-light').prop('disabled', false);
                       $('#btnBuscar').prop('disabled', true);
 

@@ -1,6 +1,5 @@
 <div class="panel panel-border panel-success" id="IdInformationCliente">
     <div class="panel-body">
-
       <div class="form-group">
           {!! Form::label('nombre', 'Nombre*', ['class' => 'col-sm-3 control-label']) !!}
           <div class="col-sm-9">
