@@ -14,6 +14,8 @@ class Cliente extends Model
                          'telefono',
                          'nit',
                          'dpi',
+                         'ocupacion',
+                         'email',
                          'descuento',
                        ];
 

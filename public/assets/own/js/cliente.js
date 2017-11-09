@@ -7,6 +7,4 @@ $(document).ready(function(){
             $('.form-horizontal .waves-light').prop('disabled', true);
           });
 
-        
-
 });

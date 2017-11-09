@@ -28,6 +28,8 @@ $factory->define(App\Models\Cliente::class, function (Faker\Generator $faker) {
         'telefono'     => $faker->phoneNumber,
         'nit'          => $faker->ean8,
         'dpi'          => $faker->ean13,
+        'ocupacion'    => $faker->jobTitle,
+        'email'        => $faker->email,
         'descuento'    => 0
     ];
 });
