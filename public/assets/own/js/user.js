@@ -27,6 +27,8 @@ $(document).ready(function(){
 
               var verification_data = new AjaxRequest( dataArray, url, $('#token').val() );
 
+
+
               verification_data.sending(function ( responseError ) {
                   if ( responseError ) {
                     swal ({
