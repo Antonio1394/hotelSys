@@ -77,3 +77,28 @@
                                       "data-parsley-minlength-message" => "Escriba 8 digitos",]) !!}
     </div>
 </div>
+
+
+
+
+<div class="form-group">
+    {!! Form::label('ocupacion', 'Ocupación:*', ['class' => 'col-sm-3 control-label']) !!}
+    <div class="col-sm-9">
+        {!! Form::text('ocupacion', null, ['class' => 'form-control',
+                                      'id' => 'ocupacion',
+                                      'placeholder' => 'Ocupación del cliente',
+                                      'required' => 'required',
+                                      'data-parsley-required-message' => 'Escriba la Ocupación']) !!}
+    </div>
+</div>
+
+<div class="form-group">
+    {!! Form::label('email', 'Email', ['class' => 'col-sm-3 control-label']) !!}
+    <div class="col-sm-9">
+        {!! Form::email('email', null, ['class' => 'form-control',
+                                      'id' => 'email',
+                                      'placeholder' => 'Email del cliente',
+                                      'data-parsley-type' => "email",
+                                      "data-parsley-type-message" => "Escriba un correo",]) !!}
+    </div>
+</div>
