@@ -25,6 +25,7 @@ class CreateReservacionesTable extends Migration
             $table->string('boleta');
             $table->string('placa');
             $table->string('color');
+            $table->boolean('estado');
             $table->foreign('idCliente')
                   ->references('id')
                   ->on('clientes');
