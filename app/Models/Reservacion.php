@@ -19,6 +19,11 @@ class Reservacion extends Model
 
 
 
+
+
+
+
+
                        ];
 
     public $relations=['cliente','habitacion'];
