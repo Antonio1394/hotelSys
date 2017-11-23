@@ -34,6 +34,10 @@
                             <tbody>
 
 
+
+
+
+
 															
                                 @foreach($cliente as $key => $value)
                                     <tr>
