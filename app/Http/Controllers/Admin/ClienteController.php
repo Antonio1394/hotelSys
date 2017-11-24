@@ -76,7 +76,10 @@ class ClienteController extends Controller
      */
     public function edit($id)
     {
-        //
+       $dataEdit=Cliente::find($id);
+       if (empty($dataEdit))
+            abort(404);
+        return view('admin.cliente.edit',compact('dataEdit'));
     }
 
     /**
