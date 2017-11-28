@@ -43,7 +43,7 @@
                                       'required' => 'required',
                                       'placeholder' => 'Teléfono',
                                       'data-parsley-required-message' => 'Escriba el Teléfono',
-                                      'data-parsley-type' => "digits",
+                                      'data-parsley-type' => 'integer',
                                       "data-parsley-type-message" => "Escriba un numero",
                                       'data-parsley-minlength' => "8",
                                       "data-parsley-minlength-message" => "Escriba 8 digitos",]) !!}
@@ -69,7 +69,7 @@
     {!! Form::label('nit', 'NIT', ['class' => 'col-sm-3 control-label']) !!}
     <div class="col-sm-9">
         {!! Form::number('nit', null, ['class' => 'form-control',
-                                      'id' => 'nit',
+                                      'id' => 'idNit',
                                       'placeholder' => 'NIT',
                                       'data-parsley-type' => "digits",
                                       "data-parsley-type-message" => "Escriba un numero",
@@ -79,13 +79,8 @@
 </div>
 
 
-
-
-
-
-
 <div class="form-group">
-    {!! Form::label('ocupacion', 'Ocupación:*', ['class' => 'col-sm-3 control-label']) !!}
+    {!! Form::label('ocupacion', 'Ocupación*', ['class' => 'col-sm-3 control-label']) !!}
     <div class="col-sm-9">
         {!! Form::text('ocupacion', null, ['class' => 'form-control',
                                       'id' => 'ocupacion',

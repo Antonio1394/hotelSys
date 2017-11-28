@@ -45,6 +45,8 @@ class ClienteController extends Controller
           $cliente->direccion=$request->direccion;
           $cliente->telefono=$request->telefono;
           $cliente->dpi=$request->dpi;
+          $cliente->ocupacion=$request->ocupacion;
+          $cliente->email=$request->email;
           if($request->nit=="")
             $cliente->nit='C/F';
           else
@@ -91,7 +93,26 @@ class ClienteController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
+        try {
+            $cliente=Cliente::findOrFail($id);
+            $cliente->nombre=$request->nombre;
+            $cliente->apellido=$request->apellido;
+            $cliente->direccion=$request->direccion;
+            $cliente->telefono=$request->telefono;
+            $cliente->dpi=$request->dpi;
+            $cliente->ocupacion=$request->ocupacion;
+            $cliente->email=$request->email;
+            if($request->nit=="")
+              $cliente->nit='C/F';
+            else
+              $cliente->nit=$request->nit;
+            $cliente->save();
+            return redirect()->back()->with('message','Registro Editado correctamente.');
+        } catch (Exception $e) {
+            return redirect()->back()->with("error", "No se pudo realizar la acción.");
+        }
+
     }
 
     /**
@@ -103,5 +124,37 @@ class ClienteController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function verifyDpi(Request $request)
+    {
+        $number=Cliente::where('dpi',$request->dataArray['dpi'])->count();
+        $res=($number==0)? "ok":"error";
+        return $res;
+    }
+
+    public function verifyDpiEdit(Request $request)
+    {
+        $number=Cliente::where('dpi',$request->dataArray['dpi'])
+                        ->where('id','!=',$request->dataArray['id'])
+                        ->count();
+        $res=($number==0)? "ok":"error";
+        return $res;
+    }
+
+    public function verifyNit(Request $request)
+    {
+        $number=Cliente::where('nit',$request->dataArray['nit'])->count();
+        $res=($number==0)? "ok":"error";
+        return $res;
+    }
+
+    public function verifyNitEdit(Request $request)
+    {
+      $number=Cliente::where('nit',$request->dataArray['nit'])
+                      ->where('id','!=',$request->dataArray['id'])
+                      ->count();
+      $res=($number==0)? "ok":"error";
+      return $res;
     }
 }

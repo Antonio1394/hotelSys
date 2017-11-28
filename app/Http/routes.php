@@ -37,6 +37,10 @@ Route::group(['prefix' => 'admin', 'namespace' => '\Admin', 'middleware' => ['au
     Route::resource('/reservacion','ReservacionController');
 
     ///Ruta para Clientes
+    Route::post('/cliente/verifyDpi','ClienteController@verifyDpi');
+    Route::post('/cliente/verifyDpiEdit','ClienteController@verifyDpiEdit');
+    Route::post('/cliente/verifyNit','ClienteController@verifyNit');
+    Route::post('/cliente/verifyNitEdit','ClienteController@verifyNitEdit');
     Route::resource('/cliente','ClienteController');
 
 

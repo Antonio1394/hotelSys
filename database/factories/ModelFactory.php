@@ -25,7 +25,7 @@ $factory->define(App\Models\Cliente::class, function (Faker\Generator $faker) {
         'nombre'       => $faker->name,
         'apellido'     => $faker->lastName,
         'direccion'    => $faker->address,
-        'telefono'     => $faker->phoneNumber,
+        'telefono'     => $faker->unixTime($max = 'now'),
         'nit'          => $faker->ean8,
         'dpi'          => $faker->ean13,
         'ocupacion'    => $faker->jobTitle,
