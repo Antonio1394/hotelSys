@@ -8,7 +8,7 @@ class ItemHabitacion extends Model
 {
     protected $table='itemsHabitacion';
 
-    protected $fillable=['descripcion'];
+    protected $fillable=['descripcion','precio'];
 
 
     public $relations=['detalleHabitacion'];

@@ -15,6 +15,7 @@ class CreateItemsHabitacionTable extends Migration
         Schema::create('itemsHabitacion', function (Blueprint $table) {
             $table->bigIncrements('id')->unsigned();
             $table->string('descripcion');
+            $table->double('precio', 15, 8);
             $table->timestamps();
         });
     }
