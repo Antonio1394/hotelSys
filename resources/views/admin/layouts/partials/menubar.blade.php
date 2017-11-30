@@ -23,6 +23,10 @@
                     <a href="{{url('/admin/item')}}" class="waves-effect @yield('itemMenu', 'default')"><i class="md md-toc"></i> <span> Items Habitación </span> </a>
                 </li>
 
+                <li class="@yield('inventarioMenu', 'default')">
+                    <a href="{{url('/admin/inventario')}}" class="waves-effect @yield('inventarioMenu', 'default')"><i class="fa fa-cubes"></i> <span> Inventario </span> </a>
+                </li>
+
                 <li class="@yield('ClienteMenu', 'default')">
                     <a href="{{url('/admin/cliente')}}" class="waves-effect @yield('clienteMenu', 'default')"><i class="md  md-assignment-ind"></i> <span> Clientes </span> </a>
                 </li>

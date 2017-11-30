@@ -46,6 +46,9 @@ Route::group(['prefix' => 'admin', 'namespace' => '\Admin', 'middleware' => ['au
     ////Ruta para items
     Route:resource('/item','itemController');
 
+    ////Rutas para InventarioController
+    Route::resource('/inventario','InventarioController');
+
 
 
 
