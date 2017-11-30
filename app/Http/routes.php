@@ -43,6 +43,9 @@ Route::group(['prefix' => 'admin', 'namespace' => '\Admin', 'middleware' => ['au
     Route::post('/cliente/verifyNitEdit','ClienteController@verifyNitEdit');
     Route::resource('/cliente','ClienteController');
 
+    ////Ruta para items
+    Route:resource('/item','itemController');
+
 
 
 
