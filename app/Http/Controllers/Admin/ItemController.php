@@ -58,7 +58,7 @@ class ItemController extends Controller
      */
     public function show($id)
     {
-        //
+
     }
 
     /**
@@ -69,7 +69,10 @@ class ItemController extends Controller
      */
     public function edit($id)
     {
-        //
+        $dataEdit=ItemHabitacion::find($id);
+        if (empty($dataEdit))
+            abort(404);
+          return view('admin.item.edit',compact('dataEdit'));
     }
 
     /**
@@ -81,7 +84,15 @@ class ItemController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        try {
+            $item=ItemHabitacion::findOrFail($id);
+            $item->update($request->all());
+            return redirect()->back()->with('message','Registro Editado correctamente.');
+        } catch (Exception $e) {
+            return redirect()->back()->with("error", "No se pudo realizar la acción.");
+
+        }
+
     }
 
     /**

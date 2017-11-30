@@ -20,7 +20,7 @@
                                         'id' => 'telefono',
                                         'required' => 'required',
                                         'placeholder' => 'Teléfono',
-                                        'data-parsley-required-message' => 'Escriba el Teléfono',
+                                        'data-parsley-required-message' => 'Escriba el costo',
                                         'data-parsley-type' => 'integer',
                                         "data-parsley-type-message" => "Escriba un numero",]) !!}
         <span class="input-group-addon">.00</span>
