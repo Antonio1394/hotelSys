@@ -1,7 +1,6 @@
 @extends('admin.layouts.principal')
 @section('title', 'Administrador')
-@section('userMenu', 'active')
-
+@section('itemMenu', 'active')
 @section('styles')
 {!! Html::style('assets/own/dist/sweetalert.css') !!}
 @endsection

@@ -27,7 +27,7 @@ class ItemController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.item.create');
     }
 
     /**
@@ -38,7 +38,16 @@ class ItemController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        try {
+            $item=new ItemHabitacion;
+            $item->descripcion=$request->descripcion;
+            $item->precio=$request->precio;
+            $item->save();
+            return redirect()->back()->with('message','Registro creado correctamente.');
+        } catch (Exception $e) {
+            return redirect()->back()->with("error", "No se pudo realizar la acción.". $e->getMessage());
+        }
+
     }
 
     /**
