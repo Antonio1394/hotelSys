@@ -14,7 +14,7 @@
     				</div>
     				<div class="panel-body">
 												<div class="div-btn-new">
-														<button class="btn btn-info waves-effect waves-light loadModal" data-toggle="modal" data-target="#modal-maintenances" data-url="/admin/item/create" data-title="Crear Item de Habitación">
+														<button class="btn btn-info waves-effect waves-light loadModal" data-toggle="modal" data-target="#modal-maintenances" data-url="/admin/inventario/create" data-title="Ingresar Producto">
 																<i class="fa fa-plus m-r-5"></i>
 																<span>Nuevo</span>
 														</button>
