@@ -12,6 +12,9 @@
     </div>
 </div>
 
+
+
+
 <div class="form-group">
     {!! Form::label('marca', 'Marca*', ['class' => 'col-sm-3 control-label']) !!}
     <div class="col-sm-9">
