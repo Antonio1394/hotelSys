@@ -38,7 +38,18 @@ class InventarioController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        try {
+            $inventario=new Inventario;
+            $inventario->producto=$request->producto;
+            $inventario->marca=$request->marca;
+            $inventario->cantidad=$request->cantidad;
+            $inventario->save();
+            return redirect()->back()->with('message','Registro creado correctamente.');
+        } catch (Exception $e) {
+          return redirect()->back()->with("error", "No se pudo realizar la acción.". $e->getMessage());
+
+        }
+
     }
 
     /**
