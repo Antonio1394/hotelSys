@@ -12,27 +12,13 @@
     </div>
 </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <div class="form-group">
     {!! Form::label('marca', 'Marca*', ['class' => 'col-sm-3 control-label']) !!}
     <div class="col-sm-9">
         {!! Form::text('marca', null, ['class' => 'form-control',
                                       'id' => 'descripcion',
                                       'required' => 'required',
-                                      'placeholder' => 'Escriba el Producto u objeto',
+                                      'placeholder' => 'Escriba la marca del producto',
                                       'data-parsley-required-message' => 'No puede ir vacio']) !!}
     </div>
 </div>
@@ -43,10 +29,9 @@
           {!! Form::number('cantidad', null, ['class' => 'form-control',
                                         'id' => 'telefono',
                                         'required' => 'required',
-                                        'placeholder' => 'Teléfono',
-                                        'data-parsley-required-message' => 'Escriba el costo',
+                                        'placeholder' => 'Cantidad de ingreso',
+                                        'data-parsley-required-message' => 'Escriba una cantidad',
                                         'data-parsley-type' => 'integer',
                                         "data-parsley-type-message" => "Escriba un numero",]) !!}
-        <span class="input-group-addon">.00</span>
       </div>
 </div>
