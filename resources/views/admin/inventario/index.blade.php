@@ -37,7 +37,7 @@
                                         <td>{{ $value->marca }}</td>
                                         <td>{{ $value->cantidad }}</td>
                                         <td class="text-center">
-																				<button class="btn btn-icon waves-effect waves-light btn-primary loadModal" data-toggle="modal" data-target="#modal-maintenances" data-url="/admin/item/{{ $value->id }}/edit" data-title="Actualizar Item">
+																				<button class="btn btn-icon waves-effect waves-light btn-primary loadModal" data-toggle="modal" data-target="#modal-maintenances" data-url="/admin/inventario/{{ $value->id }}/edit" data-title="Actualizar Item">
 																						<i class="fa fa-pencil" aria-hidden="true"></i>
 																				</button>
                                         </td>
