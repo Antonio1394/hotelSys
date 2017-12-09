@@ -23,6 +23,9 @@ $(document).ready(function(){
                dpi:$("#dpi").val(),
                nit:$("#idNit").val(),
             };
+
+
+            
             url = '/admin/cliente/verifyDpiEdit';
             url2= '/admin/cliente/verifyNitEdit'
          }
