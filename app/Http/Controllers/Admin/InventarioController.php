@@ -20,11 +20,6 @@ class InventarioController extends Controller
         return view('admin.inventario.index',compact('inventario'));
     }
 
-
-
-
-    
-
     /**
      * Show the form for creating a new resource.
      *
@@ -76,7 +71,10 @@ class InventarioController extends Controller
      */
     public function edit($id)
     {
-        //
+        $dataEdit=Inventario::find($id);
+          if(empty($dataEdit))
+            abort(404);
+          return view('admin.inventario.edit',compact('dataEdit'));
     }
 
     /**
@@ -88,7 +86,14 @@ class InventarioController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        try {
+            $inventario=Inventario::findOrFail($id);
+            $inventario->update($request->all());
+            return redirect()->back()->with('message','Registro Editado correctamente.');
+        } catch (Exception $e) {
+            return redirect()->back()->with("error", "No se pudo realizar la acción.");
+        }
+
     }
 
     /**
