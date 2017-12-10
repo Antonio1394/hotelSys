@@ -20,6 +20,11 @@ class InventarioController extends Controller
         return view('admin.inventario.index',compact('inventario'));
     }
 
+
+
+
+    
+
     /**
      * Show the form for creating a new resource.
      *
