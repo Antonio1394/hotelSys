@@ -47,7 +47,10 @@ Route::group(['prefix' => 'admin', 'namespace' => '\Admin', 'middleware' => ['au
     Route:resource('/item','itemController');
 
     ////Rutas para InventarioController
+    Route::get('/inventario/showPlus/{id}','InventarioController@showPlus');
+    Route::post('/inventario/storePlus','InventarioController@storePlus');
     Route::resource('/inventario','InventarioController');
+
 
 
 

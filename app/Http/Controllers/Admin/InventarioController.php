@@ -106,4 +106,25 @@ class InventarioController extends Controller
     {
         //
     }
+
+    public function showPlus($id)
+    {
+      return view('admin.inventario.showPlus',compact('id'));
+    }
+
+    public function storePlus(Request $request)
+    {
+      try {
+        $id=$request->id;
+        $producto=Inventario::findOrFail($id);
+        $producto->cantidad+=$request->cantidad;
+        $producto->save();
+        return redirect()->back()->with('message','Registro Editado correctamente.');
+      } catch (Exception $e) {
+        return redirect()->back()->with("error", "No se pudo realizar la acción.");
+      }
+
+
+
+    }
 }

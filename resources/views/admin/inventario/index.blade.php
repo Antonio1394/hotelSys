@@ -40,6 +40,9 @@
 																				<button class="btn btn-icon waves-effect waves-light btn-primary loadModal" data-toggle="modal" data-target="#modal-maintenances" data-url="/admin/inventario/{{ $value->id }}/edit" data-title="Actualizar Item">
 																						<i class="fa fa-pencil" aria-hidden="true"></i>
 																				</button>
+																				<button class="btn btn-icon waves-effect waves-light btn-inverse loadModal" data-toggle="modal" data-target="#modal-maintenances" data-url="/admin/inventario/showPlus/{{ $value->id }}" data-title="Actualizar Item">
+																						<i class="ion-plus" aria-hidden="true"></i>
+																				</button>
                                         </td>
 																		</tr>
                                 @endforeach
