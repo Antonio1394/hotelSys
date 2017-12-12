@@ -28,7 +28,10 @@
                                     <th>Cantidad</th>
 																		<th>Acciones</th>
                                 </tr>
-                            </thead>
+
+
+
+												    </thead>
                             <tbody>
                                 @foreach($inventario as $key => $value)
                                     <tr>
