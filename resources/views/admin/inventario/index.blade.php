@@ -31,6 +31,9 @@
 
 
 
+
+
+
 												    </thead>
                             <tbody>
                                 @foreach($inventario as $key => $value)
