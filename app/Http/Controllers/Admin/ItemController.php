@@ -20,6 +20,11 @@ class ItemController extends Controller
         return view('admin.item.index',compact('item'));
     }
 
+
+
+
+    
+
     /**
      * Show the form for creating a new resource.
      *
