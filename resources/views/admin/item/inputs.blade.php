@@ -19,12 +19,11 @@
           {!! Form::number('precio', null, ['class' => 'form-control',
                                         'id' => 'telefono',
                                         'required' => 'required',
-                                        'placeholder' => 'Teléfono',
+                                        'placeholder' => 'Costo en quetzales',
                                         'data-parsley-required-message' => 'Escriba el costo',
                                         'data-parsley-type' => 'integer',
                                         "data-parsley-type-message" => "Escriba un numero",]) !!}
         <span class="input-group-addon">.00</span>
       </div>
     </div>
-
 </div>
