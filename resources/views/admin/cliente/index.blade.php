@@ -43,8 +43,8 @@
 																					<button class="btn btn-icon waves-effect waves-light btn-primary loadModal" data-toggle="modal" data-target="#modal-maintenances" data-url="/admin/cliente/{{ $value->id }}/edit" data-title="Actualizar Cliente">
 																							<i class="fa fa-pencil" aria-hidden="true"></i>
 																					</button>
-																					<button class="btn btn-icon waves-effect waves-light btn-danger loadModal" data-toggle="modal" data-target="#modal-maintenances" data-url="/admin/user/{{ $value->id }}" data-title="Eliminar Cliente">
-																							<i class="fa fa-trash-o" aria-hidden="true"></i>
+																					<button class="btn btn-icon waves-effect waves-light btn-inverse loadModal" data-toggle="modal" data-target="#modal-maintenances" data-url="/admin/user/{{ $value->id }}" data-title="Eliminar Cliente">
+																							<i class="md  md-local-atm" aria-hidden="true"></i>
 																					</button>
 
                                         </td>
