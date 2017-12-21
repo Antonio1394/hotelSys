@@ -18,7 +18,7 @@ class HabitacionesTableSeeder extends Seeder
            $habitacion->noHabitacion=$i;
            $habitacion->nivel=1;
            $habitacion->estado=1;
-           $habitacion->tarifa=250;
+           $habitacion->tarifa=150;
            $habitacion->save();
         }
     }

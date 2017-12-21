@@ -41,6 +41,7 @@ Route::group(['prefix' => 'admin', 'namespace' => '\Admin', 'middleware' => ['au
     Route::post('/cliente/verifyDpiEdit','ClienteController@verifyDpiEdit');
     Route::post('/cliente/verifyNit','ClienteController@verifyNit');
     Route::post('/cliente/verifyNitEdit','ClienteController@verifyNitEdit');
+    Route::get('/cliente/showDiscount/{id}','ClienteController@showDiscount');
     Route::resource('/cliente','ClienteController');
 
     ////Ruta para items

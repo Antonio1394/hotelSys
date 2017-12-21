@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Models\Cliente;
+use App\Models\Habitacion;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -156,5 +157,13 @@ class ClienteController extends Controller
                       ->count();
       $res=($number==0)? "ok":"error";
       return $res;
+    }
+
+    ////Vista para descuento del cliente
+
+    public function showDiscount($id)
+    {
+      $habitacion=Habitacion::findOrFail(1);
+      return view('admin.cliente.showDiscount',compact('id','habitacion'));
     }
 }
