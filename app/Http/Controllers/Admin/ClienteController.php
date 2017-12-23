@@ -21,6 +21,10 @@ class ClienteController extends Controller
 
 
 
+
+
+
+
         
         return view('admin.cliente.index',compact('cliente'));
     }
