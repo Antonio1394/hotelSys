@@ -18,14 +18,6 @@ class ClienteController extends Controller
     public function index()
     {
         $cliente=Cliente::orderBy('id','desc')->get();
-
-
-
-
-
-
-
-        
         return view('admin.cliente.index',compact('cliente'));
     }
 
