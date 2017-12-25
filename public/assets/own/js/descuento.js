@@ -7,6 +7,10 @@ $(document).ready(function(){
             $('.form-horizontal .waves-light').prop('disabled', true);
           });
 
+
+
+
+
     $( "#txtValor" ).keypress(function() {
         var valor2=$( "#txtValor" ).val()
         var valor=150-valor2
