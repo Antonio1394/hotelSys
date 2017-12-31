@@ -20,8 +20,6 @@ class ClienteController extends Controller
         $cliente=Cliente::orderBy('id','desc')->get();
         return view('admin.cliente.index',compact('cliente'));
 
-
-        
     }
 
     /**
