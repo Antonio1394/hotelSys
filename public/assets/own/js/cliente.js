@@ -12,11 +12,6 @@ $(document).ready(function(){
 
 
 
-
-
-
-
-
     $('#createForm, #editForm').submit(function(e){
         e.preventDefault();
         var objForm=$(this), dataArray, url, url2;
