@@ -13,6 +13,12 @@
     				<div class="panel-heading" style="background:#ebeff2;">
     					<h3 class="panel-title">Listado de Habitaciones</h3>
     				</div>
+						<div class="div-btn-new">
+								<button class="btn btn-info waves-effect waves-light loadModal" data-toggle="modal" data-target="#modal-maintenances" data-url="/admin/inventario/create" data-title="Ingresar Producto">
+										<i class="fa fa-plus m-r-5"></i>
+										<span>Nuevo</span>
+								</button>
+						</div>
     				<div class="panel-body" style="background:#ebeff2;">
                 <!--Inicio  -->
 								@foreach($habitaciones as $data)
