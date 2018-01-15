@@ -15,8 +15,20 @@
                     <a href="{{url('/admin/user')}}" class="waves-effect @yield('userMenu', 'default')"><i class="ti-user"></i> <span> Empleados </span> </a>
                 </li>
 
-                <li class="@yield('habitacionMenu', 'default')">
-                    <a href="{{url('/admin/habitacion')}}" class="waves-effect @yield('habitacionMenu', 'default')"><i class="fa fa-bed"></i> <span> Habitaciones </span> </a>
+
+                <li class="has_sub">
+                  <a href="#" class="waves-effect">
+                    <i class="fa fa-bed"></i>
+                    <span>Habitaciones</span>
+                  </a>
+                  <ul class="list-unstyled" style="display: none;">
+                    <li class="@yield('habitacionMenu', 'default')">
+                        <a href="{{url('/admin/habitacion')}}" class="waves-effect @yield('habitacionMenu', 'default')"><i class="fa fa-bed"></i> <span> Habitaciones </span> </a>
+                    </li>
+                    <li class="@yield('adminHabitacion', 'default')">
+                        <a href="{{url('/admin/habitacion/admin')}}" class="waves-effect @yield('adminHabitacion','default')"><i class="ion-pound"></i> <span> Administración </span> </a>
+                    </li>
+                  </ul>
                 </li>
 
                 <li class="@yield('itemMenu', 'default')">
