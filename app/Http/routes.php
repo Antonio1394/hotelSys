@@ -33,6 +33,10 @@ Route::group(['prefix' => 'admin', 'namespace' => '\Admin', 'middleware' => ['au
     Route::resource('/habitacion','HabitacionController');
 
 
+
+    
+
+
     ////Ruta para Reservaciones
     Route::resource('/reservacion','ReservacionController');
 
