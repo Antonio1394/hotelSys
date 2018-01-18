@@ -19,9 +19,7 @@
 
 
 
-
-
-                <li class="has_sub">
+              <li class="has_sub">
                   <a href="#" class="waves-effect">
                     <i class="fa fa-bed"></i>
                     <span>Habitaciones</span>
