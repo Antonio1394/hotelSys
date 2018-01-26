@@ -26,6 +26,10 @@ Route::post('auth/verify', 'Auth\AuthController@verifyLogin');
 
 
 
+
+
+
+
 Route::group(['prefix' => 'admin', 'namespace' => '\Admin', 'middleware' => ['auth']], function() {
 
     Route::get('/', 'PrincipalController@index');
