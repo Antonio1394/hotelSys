@@ -16,18 +16,6 @@ Route::post('auth/login', 'Auth\AuthController@postLogin');
 Route::get('auth/logout', 'Auth\AuthController@getLogout');
 Route::post('auth/verify', 'Auth\AuthController@verifyLogin');
 
-
-
-
-
-
-
-
-
-
-
-
-
 Route::group(['prefix' => 'admin', 'namespace' => '\Admin', 'middleware' => ['auth']], function() {
 
     Route::get('/', 'PrincipalController@index');
@@ -41,13 +29,8 @@ Route::group(['prefix' => 'admin', 'namespace' => '\Admin', 'middleware' => ['au
     Route::get('/habitacion/verifyDpi/{dpiData}','ReservacionController@verifyDpi');
     Route::resource('/habitacion','HabitacionController');
 
-
-
-
-
-
-
-
+    //Ruta para Administración de las habitaciones
+    Route::resource('/adminH','AdministracionHabitacion');
 
     ////Ruta para Reservaciones
     Route::resource('/reservacion','ReservacionController');
