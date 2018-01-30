@@ -35,9 +35,14 @@
                                         <td>{{ $key + 1 }}</td>
                                         <td>{{ $value->noHabitacion }}</td>
                                         <td>{{ $value->nivel }}</td>
-                                        <td>{{ $value->tarifa }}</td>
-                                        <td>{{ $value->estado }}</td>
-
+                                        <td>Q{{ $value->tarifa }}</td>
+                                        @if($value->estado==1)
+                                          <td>Activo</td>
+                                        @elseif($value->estado==2)
+                                          <td>Ocupada</td>
+                                        @else
+                                          <td>Mantenimiento</td>
+                                        @endif
                                         <td class="text-center">
 																				<button class="btn btn-icon waves-effect waves-light btn-primary loadModal" data-toggle="modal" data-target="#modal-maintenances" data-url="/admin/item/{{ $value->id }}/edit" data-title="Actualizar Item">
 																						<i class="fa fa-pencil" aria-hidden="true"></i>
