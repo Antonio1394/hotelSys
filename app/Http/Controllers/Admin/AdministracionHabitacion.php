@@ -23,6 +23,11 @@ class AdministracionHabitacion extends Controller
 
 
 
+
+
+
+
+
         
         return view('admin.habitacion.admin.index',compact('habitacion'));
     }
