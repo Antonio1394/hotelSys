@@ -17,10 +17,6 @@ class AdministracionHabitacion extends Controller
     public function index()
     {
         $habitacion=Habitacion::orderBy('id','desc')->get();
-
-
-
-
         return view('admin.habitacion.admin.index',compact('habitacion'));
     }
 
