@@ -18,11 +18,6 @@ class AdministracionHabitacion extends Controller
     {
         $habitacion=Habitacion::orderBy('id','desc')->get();
         return view('admin.habitacion.admin.index',compact('habitacion'));
-
-
-
-
-
     }
 
     /**
@@ -32,7 +27,7 @@ class AdministracionHabitacion extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.habitacion.admin.create');
     }
 
     /**
@@ -43,7 +38,19 @@ class AdministracionHabitacion extends Controller
      */
     public function store(Request $request)
     {
-        //
+        try {
+            $habitacion=new Habitacion;
+            $habitacion->noHabitacion=$request->noHabitacion;
+            $habitacion->nivel=$request->nivel;
+            $habitacion->estado=1;
+            $habitacion->tarifa=$habitacion->precio;
+            $habitacion->save();
+            return redirect()->back()->with('message','Registro creado correctamente.');
+        } catch (\Exception $e) {
+          return redirect()->back()->with("error", "No se pudo realizar la acción.". $e->getMessage());
+
+        }
+
     }
 
     /**
