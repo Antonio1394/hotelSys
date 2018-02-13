@@ -29,6 +29,8 @@ $(document).ready(function(){
 
 
 
+
+
             url = '/admin/cliente/verifyDpiEdit';
             url2= '/admin/cliente/verifyNitEdit'
          }
