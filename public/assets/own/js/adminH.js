@@ -6,4 +6,8 @@ $(document).ready(function(){
         .on('form:submit', function() {
             $('.form-horizontal .waves-light').prop('disabled', true);
           });
+
+
+
+          
 });
