@@ -39,9 +39,6 @@ Route::group(['prefix' => 'admin', 'namespace' => '\Admin', 'middleware' => ['au
 
 
 
-
-
-
     ///Ruta para Clientes
     Route::post('/cliente/verifyDpi','ClienteController@verifyDpi');
     Route::post('/cliente/verifyDpiEdit','ClienteController@verifyDpiEdit');
