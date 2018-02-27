@@ -8,4 +8,8 @@
         <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Cerrar</button>
     </div>
 {!! Form::close() !!}
+
+
+
+
 {!! Html::script('assets/own/js/item.js') !!}
