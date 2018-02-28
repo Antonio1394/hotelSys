@@ -22,6 +22,9 @@
 																<i class="fa fa-plus m-r-5"></i>
 																<span>Nuevo</span>
 														</button>
+
+
+														
 												</div>
                         <table id="tableData" class="table table-striped table-bordered display responsive no-wrap"  width="100%">
                             <thead>
