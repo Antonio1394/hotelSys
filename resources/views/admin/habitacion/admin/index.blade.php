@@ -10,6 +10,9 @@
 
 
 
+
+
+
 	<div class="row">
             <div class="col-lg-12">
     			<div class="panel panel-border panel-custom">
@@ -24,7 +27,7 @@
 														</button>
 
 
-														
+
 												</div>
                         <table id="tableData" class="table table-striped table-bordered display responsive no-wrap"  width="100%">
                             <thead>
