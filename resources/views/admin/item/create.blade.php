@@ -12,4 +12,8 @@
 
 
 
+
+
+
+
 {!! Html::script('assets/own/js/item.js') !!}
