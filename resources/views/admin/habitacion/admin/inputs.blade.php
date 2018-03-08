@@ -23,19 +23,46 @@
     </div>
 </div>
 
-
-
-
-
-
-
-
 <div class="form-group">
   {!! Form::label('tarifa', 'Costo*', ['class' => 'col-sm-3 control-label']) !!}
     <div class="col-sm-9">
       <div class="input-group">
         <span class="input-group-addon">Q</span>
           {!! Form::number('tarifa', null, ['class' => 'form-control',
+                                        'id' => 'costo',
+                                        'required' => 'required',
+                                        'placeholder' => 'Costo en quetzales',
+                                        'data-parsley-required-message' => 'Escriba el costo',
+                                        'data-parsley-type' => 'integer',
+                                        "data-parsley-type-message" => "Escriba un numero",]) !!}
+        <span class="input-group-addon">.00</span>
+      </div>
+    </div>
+</div>
+
+<div class="form-group">
+  {!! Form::label('tarifaFinDe', 'Costo Fin de Semana*', ['class' => 'col-sm-3 control-label']) !!}
+    <div class="col-sm-9">
+      <div class="input-group">
+        <span class="input-group-addon">Q</span>
+          {!! Form::number('tarifaFinDe', null, ['class' => 'form-control',
+                                        'id' => 'costoFinDe',
+                                        'required' => 'required',
+                                        'placeholder' => 'Costo en quetzales',
+                                        'data-parsley-required-message' => 'Escriba el costo',
+                                        'data-parsley-type' => 'integer',
+                                        "data-parsley-type-message" => "Escriba un numero",]) !!}
+        <span class="input-group-addon">.00</span>
+      </div>
+    </div>
+</div>
+
+<div class="form-group">
+  {!! Form::label('tarifaPersona', 'Costo Extra por Persona*', ['class' => 'col-sm-3 control-label']) !!}
+    <div class="col-sm-9">
+      <div class="input-group">
+        <span class="input-group-addon">Q</span>
+          {!! Form::number('tarifaPersona', null, ['class' => 'form-control',
                                         'id' => 'telefono',
                                         'required' => 'required',
                                         'placeholder' => 'Costo en quetzales',

@@ -34,6 +34,8 @@
                                     <th>No. Habitación</th>
                                     <th>Nivel</th>
 																		<th>Tarifa</th>
+																		<th>Tarifa FS</th>
+																		<th>Tarifa Pers. Ext.</th>
                                     <th>Estado</th>
 																		<th>Acciones</th>
                                 </tr>
@@ -45,6 +47,8 @@
                                         <td>{{ $value->noHabitacion }}</td>
                                         <td>{{ $value->nivel }}</td>
                                         <td>Q{{ $value->tarifa }}</td>
+																				<td>Q{{ $value->tarifaFinDe }}</td>
+																				<td>Q{{ $value->tarifaPersona }}</td>
                                         @if($value->estado==1)
                                           <td>Activo</td>
                                         @elseif($value->estado==2)
@@ -53,8 +57,11 @@
                                           <td>Mantenimiento</td>
                                         @endif
                                         <td class="text-center">
-																				<button class="btn btn-icon waves-effect waves-light btn-primary loadModal" data-toggle="modal" data-target="#modal-maintenances" data-url="/admin/item/{{ $value->id }}/edit" data-title="Actualizar Item">
+																				<button class="btn btn-icon waves-effect waves-light btn-primary loadModal" data-toggle="modal" data-target="#modal-maintenances" data-url="/admin/adminH/{{ $value->id }}/edit" data-title="Actualizar Item">
 																						<i class="fa fa-pencil" aria-hidden="true"></i>
+																				</button>
+																				<button class="btn btn-icon waves-effect waves-light btn-danger loadModal" data-toggle="modal" data-target="#modal-maintenances" data-url="/admin/adminH/{{ $value->id }}/edit" data-title="Actualizar Item">
+																						<i class="fa fa-times" aria-hidden="true"></i>
 																				</button>
                                         </td>
 																		</tr>

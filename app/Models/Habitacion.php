@@ -12,6 +12,8 @@ class Habitacion extends Model
                          'nivel',
                          'estado',
                          'tarifa',
+                         'tarifaFinDe',
+                         'tarifaPersona'
                        ];
 
     public $relations=['reservacion','detalleHabitacion','checkIn','checkOut'];

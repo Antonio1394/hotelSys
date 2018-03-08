@@ -18,6 +18,8 @@ class CreateHabitacionesTable extends Migration
             $table->integer('nivel');
             $table->integer('estado');
             $table->float('tarifa');
+            $table->float('tarifaFinDe');
+            $table->float('tarifaPersona');
             $table->timestamps();
         });
     }

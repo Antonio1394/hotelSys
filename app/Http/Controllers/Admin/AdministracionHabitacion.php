@@ -43,7 +43,9 @@ class AdministracionHabitacion extends Controller
             $habitacion->noHabitacion=$request->noHabitacion;
             $habitacion->nivel=$request->nivel;
             $habitacion->estado=1;
-            $habitacion->tarifa=$habitacion->precio;
+            $habitacion->tarifa=$request->tarifa;
+            $habitacion->tarifaFinDe=$request->tarifaFinDe;
+            $habitacion->tarifaPersona=$request->tarifaPersona;
             $habitacion->save();
             return redirect()->back()->with('message','Registro creado correctamente.');
         } catch (\Exception $e) {
@@ -72,7 +74,11 @@ class AdministracionHabitacion extends Controller
      */
     public function edit($id)
     {
-        //
+        $dataEdit=Habitacion::find($id);
+        if (empty($dataEdit))
+            abort(404);
+        return view('admin.habitacion.admin.edit',compact('dataEdit'));
+
     }
 
     /**
@@ -84,7 +90,14 @@ class AdministracionHabitacion extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        try {
+            $habitacion=Habitacion::findOrFail($id);
+            $habitacion->update($request->all());
+            return redirect()->back()->with('message','Registro Editado correctamente.');
+        } catch (\Exception $e) {
+            return redirect()->back()->with("error", "No se pudo realizar la acción.");
+        }
+
     }
 
     /**
