@@ -60,7 +60,7 @@
 																				<button class="btn btn-icon waves-effect waves-light btn-primary loadModal" data-toggle="modal" data-target="#modal-maintenances" data-url="/admin/adminH/{{ $value->id }}/edit" data-title="Actualizar Item">
 																						<i class="fa fa-pencil" aria-hidden="true"></i>
 																				</button>
-																				<button class="btn btn-icon waves-effect waves-light btn-danger loadModal" data-toggle="modal" data-target="#modal-maintenances" data-url="/admin/adminH/{{ $value->id }}/edit" data-title="Actualizar Item">
+																				<button class="btn btn-icon waves-effect waves-light btn-danger" id="btnBaja" data-id={{$value->id}}>
 																						<i class="fa fa-times" aria-hidden="true"></i>
 																				</button>
                                         </td>
@@ -77,14 +77,19 @@
 @endsection
 
 @section('scripts')
+
 		@include('templates.administrator.components.footer')
+
     {!! Html::script('assets/own/dist/sweetalert.min.js') !!}
+
     {!! Html::script('assets/plugins/moment/moment.js') !!}
 		{!! Html::script('assets/plugins/datatables/jquery.dataTables.min.js') !!}
 		{!! Html::script('assets/plugins/datatables/dataTables.bootstrap.js') !!}
 		{!! Html::script('assets/own/dist/dataTables.responsive.min.js') !!}
 		{!! Html::script('assets/own/dist/responsive.bootstrap.min.js') !!}
 		{!! Html::script('assets/plugins/parsleyjs/dist/parsley.min.js') !!}
+		{!! Html::script('assets/own/js/adminHIndex.js') !!}
+
 
 
 		<script type="text/javascript">
@@ -96,4 +101,5 @@
 						} );
 				} );
 		</script>
+
 @endsection

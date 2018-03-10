@@ -30,6 +30,7 @@ Route::group(['prefix' => 'admin', 'namespace' => '\Admin', 'middleware' => ['au
     Route::resource('/habitacion','HabitacionController');
 
     //Ruta para Administración de las habitaciones
+    Route::post('/adminH/BajaH','AdministracionHabitacion@Bajah');
     Route::resource('/adminH','AdministracionHabitacion');
 
     ////Ruta para Reservaciones
