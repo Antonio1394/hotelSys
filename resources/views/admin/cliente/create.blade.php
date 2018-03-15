@@ -6,5 +6,9 @@
     </div>
 
 
+
+
+
+
 {!! Form::close() !!}
 {!! Html::script('assets/own/js/cliente.js') !!}
