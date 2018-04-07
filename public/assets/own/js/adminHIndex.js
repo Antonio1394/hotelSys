@@ -2,9 +2,7 @@
 
 $(document).ready(function(){
 
-  $( ".btn-danger" ).click(function() {
-    console.log( $( '#btnBaja' ).data( 'id' ) );
+  $( ".btn-borrar" ).click(function(e) {
+    console.log( $(e.target).data(' baja ') );
   });
-
-
 });
