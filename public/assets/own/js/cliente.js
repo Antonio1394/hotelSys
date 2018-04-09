@@ -7,9 +7,6 @@ $(document).ready(function(){
             $('.form-horizontal .waves-light').prop('disabled', true);
           });
 
-
-
-
     $('#createForm, #editForm').submit(function(e){
         e.preventDefault();
         var objForm=$(this), dataArray, url, url2;
