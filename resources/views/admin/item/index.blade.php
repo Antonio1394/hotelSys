@@ -13,18 +13,6 @@
     					<h3 class="panel-title">Registro de Usuarios</h3>
     				</div>
     				<div class="panel-body">
-
-
-
-
-
-
-
-
-
-
-
-							
 												<div class="div-btn-new">
 														<button class="btn btn-info waves-effect waves-light loadModal" data-toggle="modal" data-target="#modal-maintenances" data-url="/admin/item/create" data-title="Crear Item de Habitación">
 																<i class="fa fa-plus m-r-5"></i>
